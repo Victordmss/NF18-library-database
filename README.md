@@ -1,5 +1,5 @@
 # NF18-library-database (UTC Project)
-## NF18 project consisting of the modeling and implementation of a library database.
+## NF18 group project consisting of the modeling and implementation of a library database.
 
 ### Système de gestion d'une bibliothèque
 
