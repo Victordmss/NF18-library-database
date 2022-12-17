@@ -455,7 +455,7 @@ def creer_emprunt(cursor, conn):
                     exemplaire = cursor.fetchone()
                     numero_pret = 0
                     if exemplaire:
-                        if exemplaire[0] == True and (exemplaire[2] in ['neuf', 'bon', 'abime']):
+                        if exemplaire[0] == True and (exemplaire[2] in ['neuf', 'bon']):
                             numero_pret = exemplaire[1]
                             ##on créé l'emprunt
 
