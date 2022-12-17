@@ -1,0 +1,109 @@
+@startuml
+skinparam nodesep 105
+skinparam ranksep 105
+class Compte_user {
+login : string {key}
+mdp : string
+}
+
+class Pret{
+date_pret : date
+duree_pret : integer
+}
+
+abstract class Ressource {
+code : integer {key}
+titre : string
+date_apparition : date
+editeur : string
+code_classification : string
+prix : float
+nombre_pret : integer
+}
+
+
+class Exemplaire {
+numero : integer
+etat : string
+disponible : boolean
+}
+
+class Livre {
+ISBN : text
+resume : text
+langue : text
+nb_pages : integer
+}
+
+
+class Film {
+langue : string
+duree : integer
+synopsis : string
+}
+
+class Musique {
+duree : integer
+style : string
+}
+
+
+
+class Membre {
+nom : string
+prénom : string
+adresse : string
+adresse_mail : mail
+}
+
+class Adherent {
+nom : string
+prenom : string
+date_naissance : date
+adresse : string
+adresse_mail : string
+num_tel : string
+nombre_pret : integer
+blackliste : boolean
+actif : boolean
+}
+
+class Contributeur {
+nom : text
+prénom : text
+date_naissance : date
+nationalité : text
+}
+
+abstract class Sanction {
+etat_sanction : boolean
+}
+
+class Deterioration {
+prix : float
+}
+
+class Retard {
+duree_retard : int
+}
+
+
+Contributeur "1" -- "*" Livre: auteur >
+Contributeur "1" -- "*" Film: réalise >
+Contributeur "*" -- "*" Film: joue >
+Contributeur "1" -- "*" Musique: compose >
+Contributeur "*" -- "*" Musique: interprète >
+
+Ressource <|-- Film: est_une <
+Ressource <|-- Musique: est_une <
+Compte_user "1" -- "1" Adherent: possède <
+Compte_user "1" -- "1" Membre: possède <
+Ressource *-- "1..*" Exemplaire
+Exemplaire "1" -- "0..1" Pret: contient <
+Pret "0..k" -- "0..n" Adherent: réalise <
+Ressource <|-- Livre: est_une <
+
+Adherent "1" -- "*" Sanction: possède >
+Sanction <|-- Deterioration: est_une <
+Sanction <|-- Retard: est_une <
+@enduml
