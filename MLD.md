@@ -1,4 +1,4 @@
-<h1>MLD v2</h1>
+<h1>MLD</h1>
 
 
 **Membre** (#id_membre : int , prenom: varchar(), nom: varchar(), adresse: varchar, adresse_mail: varchar, login => compte_user), avec login key
