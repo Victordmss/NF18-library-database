@@ -1,7 +1,7 @@
 # NF18-library-database (UTC Project)
 ## NF18 group project consisting of the modeling and implementation of a library database.
 
-###Library Database 
+### Instructions 
 
 You are in charge of designing a management system for a municipal **library** that wishes to computerize its activities: cataloguing, consultations, user management, loans, etc.
 
