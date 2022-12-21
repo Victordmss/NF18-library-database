@@ -1,7 +1,7 @@
 # NF18-library-database (UTC Project)
 ## NF18 group project consisting of the modeling and implementation of a library database.
 
-### Système de gestion d'une bibliothèque
+###Library Database 
 
 You are in charge of designing a management system for a municipal **library** that wishes to computerize its activities: cataloguing, consultations, user management, loans, etc.
 
@@ -16,7 +16,7 @@ Members :busts_in_silhouette: of the library also have a **user account** (login
 
 In order to borrow a **document**, a member needs to be authenticated. Each loan is characterized by a loan date and a loan duration. A document can only be borrowed if it is available and in good condition. A member can only borrow a limited number of works at the same time, each for a limited period of time. A member will be penalized for late return of a work, as well as if he/she damages the condition of the work. Any delay in the return of borrowed documents will result in the suspension of lending rights for a period equal to the number of days of delay. In the event of loss or serious deterioration of a document, the suspension of lending rights is maintained until the member pays for the document. Finally, the library may choose to blacklist a member in case of repeated sanctions.
 
-### Besoins :clipboard:
+### Needs :clipboard:
   -> To make it easier for members to find documents and manage their loans. <br>
   -> Facilitate the management of document resources: add documents, modify their description, add copies of a document, etc.<br>
   -> Make it easier for staff to manage loans, delays and reservations.<br>
